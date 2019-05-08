@@ -1,0 +1,6 @@
+$name: pageLayout;
+
+.#{$name} {
+  display: flex;
+  flex-direction: column;
+}
