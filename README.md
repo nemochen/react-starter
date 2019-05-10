@@ -1,4 +1,5 @@
 #### This is react-starter
+webpack4 + react 16.8.6 + fetch(redux middleware)
 
 #### Project Structure
 
