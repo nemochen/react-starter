@@ -1,12 +1,17 @@
 import keyMirror from 'keymirror';
+import { CALL_API } from '../../middleware/fetch';
+import API from '../../middleware/apis';
 
 export const ACTION_TYPES = keyMirror({
-  INDEX_ADD_COUNT: null
+  COMMON_RATE: null
 });
 
-export const testReducer = (count = 1) => {
+export const getRate = () => {
   return {
-    type: ACTION_TYPES.INDEX_ADD_COUNT,
-    data: { count }
+    [CALL_API]: {
+      type: ACTION_TYPES.COMMON_RATE,
+      url: API.COMMON_GET_RATE,
+      method: 'GET'
+    }
   };
 };

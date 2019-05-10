@@ -79,8 +79,8 @@
       "prefer-arrow-callback": 1,
       "no-case-declarations": 1,
       "newline-per-chained-call": 1,
-      "no-restricted-syntax": 1,
-      "guard-for-in": 1,
+      "no-restricted-syntax": 0,
+      "guard-for-in": 0,
       "no-mixed-operators": 0,
       "no-continue": 1,
       "func-name-matching": 1,
@@ -121,14 +121,14 @@
       ],
       "max-statements": [
           2,
-          15
+          25
       ],
       "max-depth": [
           1,
-          2
+          3
       ],
       "complexity": [
-          2,
+          0,
           10
       ],
       "max-params": [
@@ -364,6 +364,7 @@
       }],
       "react/destructuring-assignment": [0, "never"],
       "jsx-a11y/click-events-have-key-events": 0,
-      "global-require": 0
+      "global-require": 0,
+      "array-callback-return": 0
   }
 }

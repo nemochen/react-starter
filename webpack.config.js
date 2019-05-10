@@ -103,7 +103,7 @@ const stagePlugins = {
   ],
   development: [
     new HtmlWebpackPlugin({
-      template: path.resolve('./src/index.html'),
+      template: path.resolve('./public/index.html'),
       filename: 'index.html',
       inject: 'body',
       minify: false,
@@ -118,7 +118,7 @@ const stagePlugins = {
       chunkFilename: '[name].[hash].css'
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve('./src/index.html'),
+      template: path.resolve('./public/index.html'),
       filename: 'index.html',
       inject: 'body',
       minify: {

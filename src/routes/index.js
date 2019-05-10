@@ -1,7 +1,7 @@
 import React, { lazy } from 'react';
 import PropTypes from 'prop-types';
-import { injectReducer } from '../controller/middleware/rootReducer';
-import rootStore from '../controller/store';
+import { injectReducer } from '../store/reducers';
+import rootStore from '../store';
 
 const Index = lazy(() => import(/* webpackChunkName: "Index" */ './Index/index'));
 const Home = lazy(() => import(/* webpackChunkName: "Home" */ './Home'));
@@ -25,12 +25,11 @@ const AsyncComponent = props => {
   return <Component {...props} />;
 };
 
-AsyncComponent.defaultProps = {
-  componentName: PropTypes.string
+AsyncComponent.propTypes = {
+  componentName: PropTypes.string.isRequired
 };
 
-AsyncComponent.propTypes = {
-  componentName: ''
+AsyncComponent.defaultProps = {
 };
 
 export default AsyncComponent;

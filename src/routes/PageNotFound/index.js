@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './style.scss';
 
 const PageNotFound = () => {
-  const image404 = require('./image/404.png');
+  const image404 = require('./asset/404.png');
 
   return (
     <div>

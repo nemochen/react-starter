@@ -2,40 +2,43 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { testReducer } from './action';
+import { getRate } from './action';
 
 import './style.scss';
 
-class Index extends React.PureComponent {
+class Index extends React.Component {
   static propTypes = {
     // state
-    state: PropTypes.object.isRequired,
+    rate: PropTypes.object.isRequired,
     // action
-    testReducer: PropTypes.func.isRequired
+    getRate: PropTypes.func.isRequired
   }
 
   static defaultProps = {
   };
 
+  componentDidMount() {
+    this.props.getRate();
+  }
+
   _handleClick = () => {
-    this.props.testReducer(5);
   }
 
   render() {
     return (
       <div onClick={this._handleClick}>
-        Index {this.props.state.count}
+        CNY:USD = {this.props.rate.CNY}
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  state: state.Index
+  rate: state.Index.rate
 });
 
 const mapDispatchToProps = {
-  testReducer
+  getRate
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Index);
