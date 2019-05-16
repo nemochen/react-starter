@@ -30,7 +30,7 @@ const rules = [
     test: /.scss$/,
     use: [
       __PROD__ ? MiniCssExtractPlugin.loader : 'style-loader',
-      'css-loader?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
+      'css-loader?modules&importLoaders=1&localIdentName=[local]',
       { loader: 'postcss-loader' },
       'sass-loader'
     ]
