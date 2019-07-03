@@ -31,7 +31,7 @@ const rules = [
     use: [
       __PROD__ ? MiniCssExtractPlugin.loader : 'style-loader',
       'css-loader?modules&importLoaders=1&localIdentName=[local]',
-      { loader: 'postcss-loader' },
+      // { loader: 'postcss-loader' },
       'sass-loader'
     ]
   },
@@ -61,7 +61,7 @@ const rules = [
     loader: 'url-loader?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml'
   },
   {
-    test: /\.(png|jpg)$/,
+    test: /\.(png|jpg)$/i,
     loader: 'url-loader?limit=8192'
   }
 ];
